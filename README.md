@@ -8,6 +8,7 @@ Snippets para Raspberry Pi
 - [Actualizar Raspbian](#Actualizar-Raspbian)
 - [Instalación inicial Raspberry Pi](#Instalación-inicial-Raspberry-Pi)
 - [Copiar Raspbian en tarjeta SD](#Copiar-Raspbian-en-tarjeta-SD)
+- [Deshabilitar led de la cámara](#Deshabilitar-led-de-la-cámara)
 
 ## Instalar TL-WN725N
 
@@ -70,3 +71,11 @@ sudo dd bs=1m if=2015-05-05-raspbian-wheezy.img of=/dev/disk4
 ```
 
 Más información en [Raspbian](https://www.raspberrypi.org/documentation/installation/installing-images/mac.md).
+
+## Deshabilitar led de la cámara
+
+Añadir la siguiente línea en /boot/config.txt
+
+```
+disable_camera_led=1
+```
