@@ -7,6 +7,7 @@ Snippets para Raspberry Pi
 - [Instalar TL-WN725N](#Instalar-TL-WN725N)
 - [Actualizar Raspbian](#Actualizar-Raspbian)
 - [Instalación inicial Raspberry Pi](#Instalación-inicial-Raspberry-Pi)
+- [Copiar Raspbian en tarjeta SD](#Copiar-Raspbian-en-tarjeta-SD)
 
 ## Instalar TL-WN725N
 
@@ -41,3 +42,31 @@ sudo apt-get update
 sudo apt-get upgrade
 sudo rpi-update
 ```
+
+## Copiar Raspbian en tarjeta SD
+
+Descargamos la imagen de la web oficial: [Raspbian](https://www.raspberrypi.org/downloads/)
+
+Pasos para Mac
+
+Obtener donde está la tarjeta SD en el Mac
+
+```
+diskutil list
+```
+
+Por ejemplo: disk4
+
+Desmontar la tarjeta
+
+```
+diskutil unmountDisk /dev/disk4
+```
+
+Grabar la imagen
+
+```
+sudo dd bs=1m if=2015-05-05-raspbian-wheezy.img of=/dev/disk4
+```
+
+Más información en [Raspbian](https://www.raspberrypi.org/documentation/installation/installing-images/mac.md).
