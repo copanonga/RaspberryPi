@@ -6,6 +6,7 @@ Snippets para Raspberry Pi
 
 - [Instalar TL-WN725N](#Instalar-TL-WN725N)
 - [Actualizar Raspbian](#Actualizar-Raspbian)
+- [Instalación inicial Raspberry Pi](#Instalación-inicial-Raspberry-Pi)
 
 ## Instalar TL-WN725N
 
@@ -30,4 +31,13 @@ tar xzf 8188eu-v7-2015yyzz.tar.gz
 ```
 sudo apt-get update
 sudo apt-get dist-upgrade
+```
+
+## Instalación inicial Raspberry Pi
+
+```
+sudo raspi-config
+sudo apt-get update
+sudo apt-get upgrade
+sudo rpi-update
 ```
